@@ -4,18 +4,19 @@ import Car from './Car'
 
 const Cars = (props) => {
 
-  let allCar = props.carsPage.filter(m=>props.rota===m.company).map(m => <Car serialNumber={m.carNumber.serialNumber}
-                                            model={m.model}
-                                            company={m.company}
-                                            key={m.carNumber.serialNumber}
-                                            prefix={m.carNumber.prefix}
-                                            cityNumber={m.carNumber.cityNumber}
-                                            carMake={m.carMake}
+  let allCar = props.carsPage.filter(m => props.rota === m.company).map(m => <Car serialNumber={m.carNumber.serialNumber}
+                                                                                  model={m.model}
+                                                                                  company={m.company}
+                                                                                  key={m.carNumber.serialNumber}
+                                                                                  prefix={m.carNumber.prefix}
+                                                                                  cityNumber={m.carNumber.cityNumber}
+                                                                                  carMake={m.carMake}
+                                                                                  url={'/item'}
   />)
   return <div className={s.container}>
     <div>
       <ol>
-      {allCar}
+        {allCar}
       </ol>
     </div>
   </div>

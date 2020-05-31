@@ -3,6 +3,7 @@ import s from './PeoplePage.module.css'
 import PersonHeader from './PersonHeader/PersonHeader'
 import {BrowserRouter, Route} from 'react-router-dom'
 import People from './People/People'
+import PersonProfileContainer from './PersonProfile/PersonProfileContainer'
 
 const PeoplePage = (props) => {
   return <div className={s.container}>
@@ -16,6 +17,7 @@ const PeoplePage = (props) => {
       <Route path={'/kadri'} render={() => <div>Кадры</div>}/>
       <Route path={'/mto'} render={() => <div>Тех.часть</div>}/>
       <Route path={'/dg'} render={() => <div>Дежурка</div>}/>
+      <Route path={`/person/:personalId?`} render={() => <PersonProfileContainer />}/>
     </BrowserRouter>
 
   </div>

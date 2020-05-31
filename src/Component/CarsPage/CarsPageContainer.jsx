@@ -1,6 +1,8 @@
 import React from 'react'
 import CarsPage from './CarsPage'
 import {connect} from 'react-redux'
+import {withRouter} from 'react-router-dom'
+import {compose} from 'redux'
 
 const CarsPageContainer =(props)=> {
 
@@ -15,4 +17,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {})(CarsPageContainer)
+export default compose(connect(mapStateToProps, {}),withRouter)(CarsPageContainer)

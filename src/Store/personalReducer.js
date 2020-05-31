@@ -1,3 +1,5 @@
+const SET_USER_PROFILE = 'person/SET_USER_PROFILE'
+
 const initialState = {
   people: [
     {
@@ -93,13 +95,40 @@ const initialState = {
       },
     },
   ],
+  profile: [
+      {
+        family: 'Иванов',
+        name: 'Иван',
+        patronymic: 'Иванович',
+        birthDate: {
+          year: 1991,
+          month: 'Май',
+          day: 10,
+        },
+        personalId: '114455',
+        personalNum: '63-5555',
+        position: 'Инспектор ДПС',
+        rank: 'лейтенант полиции',
+        isSupervisor: false,
+        company: {
+          rota : 1,
+          vzvod: 1,
+        }}
+  ],
 }
 
 const personalReducer = (state = initialState, action) => {
   switch (action.type) {
+    case SET_USER_PROFILE: {
+
+      return {
+        ...state,
+        profile: state.people.filter(p=> p.personalId===action.profile),
+      }
+    }
     default:
       return state
   }
 }
-
+export const setProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 export default personalReducer

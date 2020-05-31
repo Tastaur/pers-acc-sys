@@ -3,12 +3,12 @@ import s from './Car.module.css'
 import {NavLink} from 'react-router-dom'
 
 const Car = (props)=>{
-  return <div className={s.container} to={`/${props.serialNumber}`}>
+  return <NavLink className={s.container} to={`${props.url}/${props.serialNumber}`}>
     <li> <div>
     <p>{props.carMake} {props.model} - {props.prefix} <strong>{props.serialNumber}</strong> {props.cityNumber}</p>
     </div>
     </li>
-  </div>
+  </NavLink>
 }
 
 export default Car

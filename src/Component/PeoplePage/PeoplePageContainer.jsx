@@ -1,6 +1,8 @@
 import React from 'react'
 import PeoplePage from './PeoplePage'
 import {connect} from 'react-redux'
+import {withRouter} from 'react-router-dom'
+import {compose} from 'redux'
 
 const PeoplePageContainer = (props) =>{
   return <div>
@@ -14,4 +16,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {})(PeoplePageContainer)
+export default compose(connect(mapStateToProps, {}),withRouter)(PeoplePageContainer)
