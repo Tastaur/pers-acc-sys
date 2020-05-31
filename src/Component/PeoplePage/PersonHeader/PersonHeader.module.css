@@ -1,0 +1,7 @@
+.header{
+    height: 60px;
+    display: flex;
+    padding: 20px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,11 @@
+.main{
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.22);
+    flex-direction: column;
+}
+.wrapper{
+    margin-top: 50px;
+    padding: 10px;
+    background: lightgray;
+    min-height: 575px;
+}

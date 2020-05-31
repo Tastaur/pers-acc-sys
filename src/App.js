@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {connect, Provider} from 'react-redux'
+import {BrowserRouter, Route, withRouter} from 'react-router-dom'
+import store from './Store/Store'
+import s from './App.module.css'
+import {compose} from 'redux'
+import PeoplePageContainer from './Component/PeoplePage/PeoplePageContainer'
+import Header from './Component/Header/Header'
+import CarsPageContainer from './Component/CarsPage/CarsPageContainer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+        <div className={s.main}>
+          <div>
+            <Header />
+          </div>
+          <div className={s.wrapper}>
+            <Route path='/people' render={()=> <div>
+              <PeoplePageContainer/>
+            </div>}/>
+            <Route path='/car' render={()=> <div>
+              <CarsPageContainer/>
+            </div>}/>
+            <Route path='/info' render={()=> <div>
+              info
+            </div>}/>
+          </div>
+        </div>
+    )
+  }
 }
 
-export default App;
+const mapStateToProps = (props) =>{
+return {}
+}
+const AppContainer = compose(withRouter,connect(mapStateToProps,{}))(App)
+
+const PersAccSys = (props)=>{
+  return(
+      <BrowserRouter>
+        <Provider store={store}>
+          <AppContainer/>
+        </Provider>
+      </BrowserRouter>
+  )
+}
+
+export default PersAccSys;
