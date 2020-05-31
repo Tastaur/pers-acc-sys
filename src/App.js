@@ -8,7 +8,7 @@ import PeoplePageContainer from './Component/PeoplePage/PeoplePageContainer'
 import Header from './Component/Header/Header'
 import CarsPageContainer from './Component/CarsPage/CarsPageContainer'
 
-
+const baseUrl = '/pers-acc-sys'
 class App extends React.Component {
   render() {
     return (
@@ -17,13 +17,13 @@ class App extends React.Component {
             <Header startUrl={'/pers-acc-sys'}/>
           </div>
           <div className={s.wrapper}>
-            <Route path='/people' render={()=> <div>
+            <Route path={`${baseUrl}/people`} render={()=> <div>
               <PeoplePageContainer startUrl={'/pers-acc-sys'}/>
             </div>}/>
-            <Route path='/car' render={()=> <div>
-              <CarsPageContainer  startUrl={'/pers-acc-sys'}/>
+            <Route path={`${baseUrl}/car`} render={()=> <div>
+              <CarsPageContainer  startUrl={`pers-acc-sys/pers-acc-sys`}/>
             </div>}/>
-            <Route path='/info' render={()=> <div>
+            <Route path={`${baseUrl}/info`} render={()=> <div>
               info
             </div>}/>
           </div>
@@ -39,7 +39,7 @@ const AppContainer = compose(withRouter,connect(mapStateToProps,{}))(App)
 
 const PersAccSys = (props)=>{
   return(
-      <BrowserRouter basename={'/pers-acc-sys'}>
+      <BrowserRouter >
         <Provider store={store}>
           <AppContainer/>
         </Provider>
