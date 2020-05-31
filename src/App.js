@@ -8,19 +8,20 @@ import PeoplePageContainer from './Component/PeoplePage/PeoplePageContainer'
 import Header from './Component/Header/Header'
 import CarsPageContainer from './Component/CarsPage/CarsPageContainer'
 
+
 class App extends React.Component {
   render() {
     return (
         <div className={s.main}>
           <div>
-            <Header />
+            <Header startUrl={'/pers-acc-sys'}/>
           </div>
           <div className={s.wrapper}>
             <Route path='/people' render={()=> <div>
-              <PeoplePageContainer/>
+              <PeoplePageContainer startUrl={'/pers-acc-sys'}/>
             </div>}/>
             <Route path='/car' render={()=> <div>
-              <CarsPageContainer/>
+              <CarsPageContainer  startUrl={'/pers-acc-sys'}/>
             </div>}/>
             <Route path='/info' render={()=> <div>
               info

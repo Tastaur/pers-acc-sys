@@ -7,7 +7,7 @@ import Cars from './Cars/Cars'
 const CarsPage = (props) => {
 
   return <div className={s.container}>
-    <CarHeader startUrl={'/car'}/>
+    <CarHeader startUrl={`${props.startUrl}/car`}/>
       <BrowserRouter basename={'/car'}>
       <Route path={'/1rota'} render={() => <div><Cars {...props} rota={1}/></div>}/>
       <Route path={'/2rota'} render={() => <div><Cars {...props} rota={2}/></div>}/>

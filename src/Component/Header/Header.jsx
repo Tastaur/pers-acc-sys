@@ -18,9 +18,9 @@ const Header = props => {
       <NavbarToggle aria-controls={'responsive-navbar-nav'}/>
       <NavbarCollapse id={'responsive-navbar-nav'}>
         <Nav className={'mr-auto'}>
-          <NavLink href={'/people'}> Личный состав </NavLink>
-          <NavLink href={'/car'}> Транспорт </NavLink>
-          <NavLink href={'/info'}> Телефонный справочник </NavLink>
+          <NavLink href={`${props.startUrl}/people`}> Личный состав </NavLink>
+          <NavLink href={`${props.startUrl}/car`}> Транспорт </NavLink>
+          <NavLink href={`${props.startUrl}/info`}> Телефонный справочник </NavLink>
         </Nav>
       </NavbarCollapse>
     </Container>
