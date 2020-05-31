@@ -89,7 +89,7 @@ const initialState = {
       isSupervisor: false,
       company: {
         rota : 'ИАЗ',
-        vzvod: 'Дознание  ',
+        vzvod: 'Дознание',
       },
     },
   ],
