@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0dc732b319eb0352d99fd32eb105b2e0",
+    "revision": "8cf1744d30817520bf4a2b34d2742395",
     "url": "/pers-acc-sys/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pers-acc-sys/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "19c31266f8c37e9dd456",
+    "revision": "5d1ca500717d6b63c3b9",
     "url": "/pers-acc-sys/static/css/main.f9728130.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pers-acc-sys/static/js/2.c312829b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "19c31266f8c37e9dd456",
-    "url": "/pers-acc-sys/static/js/main.4528726c.chunk.js"
+    "revision": "5d1ca500717d6b63c3b9",
+    "url": "/pers-acc-sys/static/js/main.b4213422.chunk.js"
   },
   {
     "revision": "a6eafbc4f09dd95785f8",
