@@ -38,7 +38,7 @@ const AppContainer = compose(withRouter,connect(mapStateToProps,{}))(App)
 
 const PersAccSys = (props)=>{
   return(
-      <BrowserRouter >
+      <BrowserRouter basename={'/pers-acc-sys'}>
         <Provider store={store}>
           <AppContainer/>
         </Provider>
