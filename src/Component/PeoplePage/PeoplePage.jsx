@@ -6,7 +6,7 @@ import People from './People/People'
 
 const PeoplePage = (props) => {
   return <div className={s.container}>
-    <PersonHeader startUrl={`${props.startUrl}/people`}/>
+    <PersonHeader startUrl={`/people`}/>
       <BrowserRouter basename={'/people'}>
       <Route path={'/1rota'} render={() => <div><People podrazdelenie={'1 рота'} rota={1} vzvod={[1,2]} {...props}/></div>}/>
       <Route path={'/2rota'} render={() => <div>2 рота</div>}/>
